@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
 using UnityEngine.UI;
 
 
@@ -9,12 +11,14 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     public AudioSource sr;
     public AudioClip ac;
-    public GameObject Zombie;
+    private int z1;
+    private int z2;
+    private int z3;
     void Start()
     {
         sr = GetComponent<AudioSource>();
         ac = GetComponent<AudioClip>();
-        Zombie = GetComponent<GameObject>();
+
     }
 
     // Update is called once per frame
@@ -29,6 +33,18 @@ public class Player : MonoBehaviour
                 if (hit.collider.gameObject.name.CompareTo("Zombie") == 0)
                 {
                     sr.Play();
+
+
+                }
+                if (hit.collider.gameObject.name.CompareTo("Zombie2") == 0)
+                {
+                    sr.Play();
+
+                }
+                if (hit.collider.gameObject.name.CompareTo("Zombie3") == 0)
+                {
+                    sr.Play();
+
                 }
             }
         }
