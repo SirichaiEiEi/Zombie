@@ -30,21 +30,9 @@ public class Player : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.gameObject.name.CompareTo("Zombie") == 0)
+                if (hit.collider.CompareTag("Zombie"))
                 {
                     sr.Play();
-
-
-                }
-                if (hit.collider.gameObject.name.CompareTo("Zombie2") == 0)
-                {
-                    sr.Play();
-
-                }
-                if (hit.collider.gameObject.name.CompareTo("Zombie3") == 0)
-                {
-                    sr.Play();
-
                 }
             }
         }
